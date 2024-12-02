@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   width: 831px;
   height: 68px;
   display: flex;
