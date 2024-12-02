@@ -1,10 +1,11 @@
 body {
   font-family: Outfit;
-  background-color: greenyellow;
+  background-image: url('bad1a14b-b21c-4e7e-a22b-2dd50b39819f.jpeg');
+  background-size: cover; /* Ensures the image covers the entire body */
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
   width: 831px;
   height: 68px;
   display: flex;
