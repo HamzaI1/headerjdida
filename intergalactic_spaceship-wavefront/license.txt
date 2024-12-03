@@ -1,0 +1,11 @@
+Model Information:
+* title:	Intergalactic_Spaceship-(Wavefront)
+* source:	https://sketchfab.com/3d-models/intergalactic-spaceship-wavefront-80bb1fe8a8e748d2add62f9e9af8a802
+* author:	askemwhat (https://sketchfab.com/askemwhat)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Intergalactic_Spaceship-(Wavefront)" (https://sketchfab.com/3d-models/intergalactic-spaceship-wavefront-80bb1fe8a8e748d2add62f9e9af8a802) by askemwhat (https://sketchfab.com/askemwhat) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

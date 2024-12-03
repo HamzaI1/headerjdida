@@ -14,7 +14,6 @@
 </head>
 <body>
   <header class="header-container">
-
     <div class="header">
       <div class="social-icons">
         <i class="fab fa-facebook"></i>
@@ -36,5 +35,56 @@
     </div>
   </header>
   
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Crafting Visual Stories</h1>
+      <p class="hero-subtitle">Graphic design that transforms ideas into stunning realities.</p>
+      <div class="hero-buttons">
+        <button class="cta-button">Explore Work</button>
+        <button class="cta-button secondary">Learn More</button>
+      </div>
+    </div>
+    <div class="hero-visual" id="3d-container"></div> <!-- This will hold the 3D model -->
+  </section>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script>
+  // Set up the scene, camera, and renderer
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+// Enable transparency for the renderer
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x000000, 0); // Transparent background
+document.getElementById('3d-container').appendChild(renderer.domElement);
+
+// Add lighting
+const ambientLight = new THREE.AmbientLight(0x404040, 2);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 5, 5).normalize();
+scene.add(directionalLight);
+
+// Load the .gltf model
+const loader = new THREE.GLTFLoader();
+loader.load("intergalactic_spaceship-wavefront/scene.gltf", function (gltf) {
+  gltf.scene.scale.set(0.5, 0.5, 0.5); // Scale the model if needed
+  scene.add(gltf.scene); // Add the model to the scene
+  camera.position.z = 3; // Adjust camera position
+  animate();
+}, undefined, function (error) {
+  console.error(error);
+});
+
+// Animation loop to render the scene
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+
+</script>
 </body>
 </html>
